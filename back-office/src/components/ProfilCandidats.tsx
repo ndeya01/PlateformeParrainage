@@ -12,72 +12,46 @@ const ProfilCandidats = () => {
       telephone: "123-456-7890",
       partiPolitique: "Independent",
       slogan: "Vote for change",
-      photo: "john-doe.jpg",
-      couleurParti1: "#FF0000",
-      couleurParti2: "#00FF00",
-      couleurParti3: "#0000FF",
+      photo: "https://img.freepik.com/photos-gratuite/portrait-homme-affaires-prospere-confiant-habille-chemise-jean-decontractee_273609-28356.jpg",
+      couleurParti1: "rouge",
+      couleurParti2: "bleu",
+      couleurParti3: "vert",
       urlPage: "https://example.com/john-doe",
     },
   ];
 
   return (
     <div className="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 z-50 flex justify-center items-center overflow-hidden">
-      <div className="w-full max-w-md bg-white shadow-md rounded-md p-6 max-h-[500px] overflow-auto">
-        <h1 className="text-2xl font-bold mb-4">Informations du candidat</h1>
+      <div className="w-full max-w-lg bg-white shadow-md rounded-md p-6 max-h-[700px] overflow-auto">
         {candidatsInfo.map((candidat, index) => (
           <div key={index} className="mb-6">
-            <h2 className="text-lg font-semibold mb-2">Candidat {index + 1}</h2>
             <div>
-              <p className="font-semibold mb-1">Numéro d'électeur:</p>
-              <p>{candidat.numeroElecteur}</p>
+              <img src={candidat.photo} alt="Photo du candidat" className="w-sm h-auto" />
             </div>
             <div>
-              <p className="font-semibold mb-1">Nom:</p>
-              <p>{candidat.nom}</p>
+              <p className="font-semibold mb-1">{candidat.prenom} {candidat.nom}</p>
+              <p className="font-semibold mb-1">{candidat.slogan}</p>
             </div>
             <div>
-              <p className="font-semibold mb-1">Prénom:</p>
-              <p>{candidat.prenom}</p>
+              <p className="font-semibold mb-1">Numéro d'électeur: <span>{candidat.numeroElecteur}</span></p>
             </div>
             <div>
-              <p className="font-semibold mb-1">Date de naissance:</p>
-              <p>{candidat.dateNaissance}</p>
+              <p className="font-semibold mb-1">Date de naissance: <span>{candidat.dateNaissance}</span></p>
             </div>
             <div>
-              <p className="font-semibold mb-1">Adresse email:</p>
-              <p>{candidat.email}</p>
+              <p className="font-semibold mb-1">Adresse email: <span>{candidat.email}</span></p>
             </div>
             <div>
-              <p className="font-semibold mb-1">Numéro de téléphone:</p>
-              <p>{candidat.telephone}</p>
+              <p className="font-semibold mb-1">Numéro de téléphone: <span>{candidat.telephone}</span></p>
             </div>
             <div>
-              <p className="font-semibold mb-1">Parti politique:</p>
-              <p>{candidat.partiPolitique}</p>
+              <p className="font-semibold mb-1">Parti politique: <span>{candidat.partiPolitique}</span></p>
             </div>
             <div>
-              <p className="font-semibold mb-1">Slogan:</p>
-              <p>{candidat.slogan}</p>
+              <p className="font-semibold mb-1">Couleur parti: {candidat.couleurParti1}, {candidat.couleurParti2}, {candidat.couleurParti3}</p>
             </div>
             <div>
-              <p className="font-semibold mb-1">Photo:</p>
-              <p>{candidat.photo}</p>
-            </div>
-            <div>
-              <p className="font-semibold mb-1">Couleur parti 1:</p>
-              <p>{candidat.couleurParti1}</p>
-            </div>
-            <div>
-              <p className="font-semibold mb-1">Couleur parti 2:</p>
-              <p>{candidat.couleurParti2}</p>
-            </div>
-            <div>
-              <p className="font-semibold mb-1">Couleur parti 3:</p>
-              <p>{candidat.couleurParti3}</p>
-            </div>
-            <div>
-              <p className="font-semibold mb-1">URL vers la page d'informations:</p>
-              <p>{candidat.urlPage}</p>
+              <p className="font-semibold mb-1">Page d'informations: <span>{candidat.urlPage}</span></p>
             </div>
           </div>
         ))}

@@ -6,6 +6,7 @@ import Parrainage from "./pages/Parrainage";
 import Electeurs from "./pages/Electeurs";
 import Parametres from "./pages/Parametres";
 import Acceuil from "./pages/Acceuil";
+import Login from "./pages/Login";
 function App() {
   return (
     <Router>
@@ -18,7 +19,7 @@ function App() {
           <Route path="electeurs" element={<Electeurs/>}/>
           <Route path="parametre" element={<Parametres/>}/>
         </Route>
-        <Route path="login" element={<div>this a login page</div>}/>
+        <Route path="login" element={<Login/>}/>
       </Routes>
     </Router>
   )
