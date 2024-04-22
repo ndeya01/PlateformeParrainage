@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory, useNavigate } from 'react-router-dom';
 import './Login.css'
 
 const Login = () => {
@@ -25,12 +26,12 @@ const Login = () => {
     }
   };
 
+  const navigate = useNavigate()
+
   const handleSubmit = () => {
-    // Envoyer le code d'authentification à votre backend pour vérification
-    // Une fois l'authentification réussie, redirigez l'utilisateur vers la page d'accueil
     if (codeAuthentification === '1234') {
-      // Redirection vers la page d'accueil
-      window.location.href = '/home';
+      // Utilisation de history.push pour rediriger l'utilisateur
+      navigate('/');
     } else {
       alert('Code d\'authentification incorrect');
     }
