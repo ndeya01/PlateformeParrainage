@@ -1,0 +1,9 @@
+.image{
+    background-image: url(../assets/000_34KN467.jpg);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+}

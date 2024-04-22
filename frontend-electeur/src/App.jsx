@@ -5,7 +5,7 @@ import {
   Outlet,
 } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Login from "./pages/Login";
+import Login from "./pages/Login/Login";
 import Inscription from "./pages/Inscription";
 import Home from "./pages/Home";
 import Profil from "./pages/Profil";
@@ -18,11 +18,7 @@ const App = () => {
     return (
       <div>
         <Navbar />
-        <div style={{ display: "flex" }}>
-          <div style={{ display:"flex" }}>
-            <Outlet />
-          </div>
-        </div>
+          <Outlet />
       </div>
     );
   };
@@ -45,7 +41,7 @@ const App = () => {
       ),
       children: [
         {
-          path: "/",
+          path: "/home",
           element: <Home/>
         },
         {
