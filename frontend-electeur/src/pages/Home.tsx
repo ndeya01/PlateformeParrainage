@@ -19,7 +19,7 @@ const Home = () => {
       id: 1,
       nom: "Doe",
       prenom: "John",
-      photo: "https://s.france24.com/media/display/e8c066f2-ce4e-11ed-8c3c-005056a90321/w:1280/p:1x1/000_33BC4QE.jpg",
+      photo: "https://img.freepik.com/photos-gratuite/portrait-homme-affaires-prospere-confiant-habille-chemise-jean-decontractee_273609-28356.jpg",
       party: "Independent",
       slogan: "Vote for change",
     },
