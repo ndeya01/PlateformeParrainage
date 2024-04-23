@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import './Inscription.css'
 
 const Inscription = () => {
@@ -13,7 +13,7 @@ const Inscription = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Vérifier la cohérence et la complétude des informations
-    if (numeroCarteElecteur && numeroCarteIdentite && nom && bureauVote && email && telephone) {
+    if (numeroCarteElecteur && numeroCarteIdentite && nom && bureauVote ) {
       setIsInfosCompletes(true);
     } else {
       alert("Veuillez saisir toutes les informations requises.");

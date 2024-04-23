@@ -52,7 +52,12 @@ const Parrainer = ({ closeModal }) => {
           </div>
         ) : (
           <div>
-            <h2 className="text-2xl font-bold mb-4">Confirmation</h2>
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-2xl font-bold">Confirmation</h2>
+              <button onClick={closeModal} className="text-gray-500 hover:text-gray-700 focus:outline-none">
+                <IoMdClose className="h-6 w-6" />
+              </button>
+            </div>
             <p className="mb-4">Votre choix a été validé avec succès.</p>
           </div>
         )}
